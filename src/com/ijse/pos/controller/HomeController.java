@@ -12,12 +12,14 @@ package com.ijse.pos.controller;
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -34,11 +36,23 @@ public class HomeController {
     public Label lblDesc;
 
     public void addCustomer(MouseEvent mouseEvent) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/com/ijse/pos/views/CustomerForm.fxml"));
+        Stage window = (Stage) this.root.getScene().getWindow();
+        try {
+            window.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/com/ijse/pos/views/CustomerForm.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        window.centerOnScreen();
     }
 
     public void addItem(MouseEvent mouseEvent) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/com/ijse/pos/views/ItemForm.fxml"));
+        Stage window = (Stage) this.root.getScene().getWindow();
+        try {
+            window.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/com/ijse/pos/views/ItemForm.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        window.centerOnScreen();
     }
 
     public void playMouseExiteAnimation(MouseEvent mouseEvent) {
