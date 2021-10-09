@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.pos.controller.HomeController">
+   <children>
+      <ImageView fitHeight="404.0" fitWidth="718.0" layoutX="-29.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="customer" fitHeight="123.0" fitWidth="159.0" layoutX="163.0" layoutY="139.0" onMouseClicked="#addCustomer" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/person.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="item" fitHeight="123.0" fitWidth="159.0" layoutX="424.0" layoutY="139.0" onMouseClicked="#addItem" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExiteAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/img/item.png" />
+         </image>
+      </ImageView>
+      <Line endX="368.0" layoutX="251.0" layoutY="272.0" opacity="0.4" startX="-165.0" stroke="WHITE" />
+      <Label id="lblMain" fx:id="lblMenu" alignment="CENTER" layoutX="29.0" layoutY="297.0" prefHeight="58.0" prefWidth="624.0" text="Pos System" textAlignment="CENTER" textFill="#03a48c">
+         <font>
+            <Font name="Rockwell Extra Bold" size="47.0" />
+         </font>
+      </Label>
+      <Label id="lblDesc" fx:id="lblDesc" alignment="CENTER" layoutX="111.0" layoutY="355.0" prefHeight="34.0" prefWidth="506.0" text="\@2021 Hasintha Diyaneth " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
